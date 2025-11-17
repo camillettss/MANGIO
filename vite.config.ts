@@ -10,7 +10,7 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
 
 export default defineConfig({
-  plugins,
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -26,6 +26,7 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
+    proxy: { '/trpc': 'http://localhost:3000' }, // Porta Express dev
     host: true,
     allowedHosts: [
       ".manuspre.computer",

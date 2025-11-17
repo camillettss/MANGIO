@@ -1,4 +1,5 @@
 import { useAuth } from "@/_core/hooks/useAuth";
+import Landing from "./Landing";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_TITLE, getLoginUrl } from "@/const";
@@ -89,54 +90,7 @@ export default function Home() {
   }
 
   if (!isAuthenticated) {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-green-50 to-white px-4">
-        <div className="max-w-2xl text-center">
-          <h1 className="text-5xl font-bold text-foreground mb-6">{APP_TITLE}</h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Crea le tue diete personalizzate in modo semplice e veloce. Cerca alimenti, aggiungi
-            quantità e monitora i tuoi macronutrienti in tempo reale.
-          </p>
-          <div className="space-y-4">
-            <Button size="lg" asChild className="w-full sm:w-auto">
-              <a href={getLoginUrl()}>Accedi per iniziare</a>
-            </Button>
-          </div>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Database completo</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Oltre 60 alimenti italiani con macronutrienti precisi per 100g
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Calcolo automatico</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  I macronutrienti si aggiornano in tempo reale mentre aggiungi alimenti
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Facile da usare</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Interfaccia intuitiva per creare pasti bilanciati rapidamente
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </div>
-    );
+    return <Landing />;
   }
 
   return (
@@ -157,7 +111,7 @@ export default function Home() {
                 Barcode
               </Button>
             </Link>
-            <span className="text-sm text-muted-foreground">Ciao, {user?.name}</span>
+            <Link href="/settings"><span className="text-sm text-muted-foreground">Ciao, {user?.name}</span></Link>
           </div>
         </div>
       </header>

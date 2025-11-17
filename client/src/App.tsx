@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import MealList from "./pages/MealList";
 import CustomFoods from "./pages/CustomFoods";
 import Barcodes from "./pages/Barcodes";
+import Settings from "./pages/Settings";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/meal-list/:id" component={MealList} />
       <Route path="/custom-foods" component={CustomFoods} />
       <Route path="/barcodes" component={Barcodes} />
+      <Route path="/settings" component={Settings} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
@@ -33,8 +35,8 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider
-        defaultTheme="light"
-        // switchable
+        defaultTheme="system"
+        storageKey="diet-creator-theme"
       >
         <TooltipProvider>
           <Toaster />

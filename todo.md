@@ -68,3 +68,28 @@
 - [x] Associazione automatica barcode dopo salvataggio
 - [x] Test recupero dati da API esterna
 - [x] Checkpoint finale con integrazione OFF
+
+## Modalità Notte
+- [x] Configurare ThemeProvider per supportare tema sistema
+- [x] Testare adattamento automatico al tema dispositivo
+- [x] Checkpoint finale con modalità notte
+
+## Landing Page Professionale
+- [x] Design hero section con titolo e CTA
+- [x] Sezione features con icone e descrizioni
+- [x] Sezione come funziona con step
+- [x] Footer con informazioni
+- [x] Animazioni e transizioni fluide
+- [x] Responsive design per mobile
+- [ ] Test su diversi dispositivi
+- [ ] Checkpoint finale con landing page
+
+## Pagina Impostazioni
+- [ ] Creare pagina Impostazioni
+- [ ] Aggiungere pulsante logout
+- [ ] Aggiungere switch tema (chiaro/scuro/automatico)
+- [ ] Funzione esportazione database alimenti
+- [ ] Funzione importazione database alimenti
+- [ ] Link alla pagina Impostazioni nell'header
+- [ ] Test tutte le funzionalità
+- [ ] Checkpoint finale con pagina Impostazioni
