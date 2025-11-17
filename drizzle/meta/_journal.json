@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1763373701634,
+      "tag": "0000_loving_spirit",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1763373745869,
+      "tag": "0001_productive_deadpool",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1763374998156,
+      "tag": "0002_clumsy_falcon",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1763375369193,
+      "tag": "0003_lively_slayback",
+      "breakpoints": true
+    }
+  ]
+}
